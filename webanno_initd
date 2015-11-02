@@ -1,0 +1,20 @@
+#!/bin/sh
+export JAVA_OPTS="-Djava.awt.headless=true -Xmx750m -XX:+UseConcMarkSweepGC -Dwebanno.home=/srv/webanno"
+
+case "$1" in
+start)
+su -c "sh /opt/webanno/bin/startup.sh" www-data
+;;
+
+stop)
+su -c "sh /opt/webanno/bin/shutdown.sh" www-data
+;;
+
+restart)
+su -c "sh /opt/webanno/bin/shutdown.sh" www-data
+su -c "sh /opt/webanno/bin/startup.sh" www-data
+;;
+esac
+
+exit 0
+
