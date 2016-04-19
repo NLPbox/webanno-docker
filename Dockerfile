@@ -25,7 +25,7 @@ RUN tomcat6-instance-create -p 18080 -c 18005 webanno && \
     chown -R www-data /opt/webanno
 
 COPY webanno_initd /etc/init.d/webanno
-RUN mv /opt/webanno-webapp-2.3.0.war /opt/webanno/webapps/webanno.war
+RUN mv /opt/webanno-webapp-2.3.1.war /opt/webanno/webapps/webanno.war
 
 RUN chmod +x /etc/init.d/webanno
 RUN update-rc.d webanno defaults
