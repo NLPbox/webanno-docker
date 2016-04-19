@@ -21,7 +21,7 @@ RUN wget --no-check-certificate https://bintray.com/artifact/download/webanno/do
 
 RUN apt-get install -y tomcat7 tomcat7-user
 
-RUN tomcat6-instance-create -p 18080 -c 18005 webanno && \
+RUN tomcat7-instance-create -p 18080 -c 18005 webanno && \
     chown -R www-data /opt/webanno
 
 COPY webanno_initd /etc/init.d/webanno
