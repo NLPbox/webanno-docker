@@ -1,6 +1,6 @@
-FROM scratch
+FROM ubuntu:15.10
 MAINTAINER Arne Neumann <nlpdocker.programming@arne.cl>
-ADD ubuntu-wily-core-cloudimg-amd64-root.tar.gz /
+#ä ADD ubuntu-wily-core-cloudimg-amd64-root.tar.gz /
 
 # a few minor docker-specific tweaks
 # see https://github.com/docker/docker/blob/master/contrib/mkimage/debootstrap
