@@ -28,7 +28,7 @@ RUN set -xe \
 RUN sed -i 's/^#\s*\(deb.*universe\)$/\1/g' /etc/apt/sources.list
 
 RUN apt-get update
-RUN apt-get install -y wget mysql-server mysql-client
+RUN apt-get install -y --force-yes wget mysql-server mysql-client
 
 COPY create_webanno_db.sql mysql-init tmp/
 
@@ -38,12 +38,12 @@ RUN rm /tmp/mysql-init
 RUN service mysql start && \
     mysql -u root < /tmp/create_webanno_db.sql
 
-RUN apt-get install -y curl
+RUN apt-get install -y --force-yes curl
 
 WORKDIR /opt
 RUN wget --no-check-certificate https://bintray.com/artifact/download/webanno/downloads/webanno-webapp-2.3.1.war
 
-RUN apt-get install -y tomcat7 tomcat7-user
+RUN apt-get install -y --force-yes tomcat7 tomcat7-user
 
 RUN tomcat7-instance-create -p 18080 -c 18005 webanno && \
     chown -R www-data /opt/webanno
