@@ -1,8 +1,8 @@
-FROM ubuntu:14.04.4
+FROM debian:squeeze
 MAINTAINER Arne Neumann <nlpdocker.programming@arne.cl>
 
 RUN apt-get update
-RUN apt-get upgrade
+# RUN apt-get upgrade
 RUN apt-get install -y --force-yes wget mysql-server mysql-client
 
 COPY create_webanno_db.sql mysql-init tmp/
