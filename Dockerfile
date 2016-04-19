@@ -1,5 +1,5 @@
 
-FROM debian:squeeze
+FROM ubuntu:14.04
 
 MAINTAINER Arne Neumann <nlpdocker.programming@arne.cl>
 
