@@ -1,4 +1,4 @@
-FROM debian:squeeze
+FROM debian:wheezy
 
 MAINTAINER Arne Neumann <nlpdocker.programming@arne.cl>
 
