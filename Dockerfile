@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM debian:squeeze
 MAINTAINER Arne Neumann <nlpdocker.programming@arne.cl>
 
 RUN apt-get update
