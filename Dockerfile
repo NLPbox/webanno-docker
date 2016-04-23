@@ -3,7 +3,7 @@ FROM debian:squeeze
 MAINTAINER Arne Neumann <nlpdocker.programming@arne.cl>
 
 RUN apt-get update
-RUN  apt-get install -y wget mysql-server mysql-client
+RUN apt-get install -y wget mysql-server mysql-client
 
 COPY create_webanno_db.sql mysql-init tmp/
 
