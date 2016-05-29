@@ -1,7 +1,7 @@
 Installation
 ============
 
-docker build -t webanno https://github.com/fkuhn/webanno-docker.git
+docker build -t webanno3 https://github.com/fkuhn/webanno3-docker.git
 
 Usage
 =====
