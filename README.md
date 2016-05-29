@@ -12,6 +12,6 @@ Usage
 =====
 The service starts via:
 
- docker run -i -t -p --name webanno 18080:18080 webanno3
+ docker run -i -t -p 18080:18080 webanno3
  
 but is not showing content when going to localhost:1880 in a browser window. 
