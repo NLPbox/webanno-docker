@@ -25,13 +25,14 @@ RUN service mysql start && \
 
 RUN apt-get install -y curl
 
+RUN apt-get install -y tomcat7 tomcat7-user
+RUN echo "JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> /etc/default/tomcat7
+
 WORKDIR /opt
 
 RUN wget --no-check-certificate  https://github.com/webanno/webanno/releases/download/webanno-3.0.0-beta-2/webanno-webapp-3.0.0-beta-2.war 
 # RUN wget http://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war -P /var/lib/tomcat7/webapps
 
-RUN apt-get install -y tomcat7 tomcat7-user
-RUN echo "JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> /etc/default/tomcat7
 RUN tomcat7-instance-create -p 18080 -c 18005 webanno && \
     chown -R www-data /opt/webanno
 
