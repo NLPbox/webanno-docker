@@ -1,6 +1,6 @@
 FROM debian:wheezy
 
-MAINTAINER Arne Neumann <nlpdocker.programming@arne.cl>
+MAINTAINER Florian Kuhn <kuhn@ids-mannheim.de>
 
 RUN apt-get update
 RUN apt-get install -y wget mysql-server mysql-client
