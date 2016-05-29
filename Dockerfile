@@ -1,4 +1,4 @@
-FROM debian:wheezy
+FROM ubuntu:trusty
 
 MAINTAINER Florian Kuhn <kuhn@ids-mannheim.de>
 
