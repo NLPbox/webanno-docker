@@ -16,7 +16,7 @@ RUN service mysql start && \
 RUN apt-get install -y curl
 
 WORKDIR /opt
-RUN wget --no-check-certificate https://bintray.com/artifact/download/webanno/downloads/webanno-webapp-2.3.1.war
+RUN wget --no-check-certificate  https://github.com/webanno/webanno/releases/download/webanno-3.0.0-beta-2/webanno-webapp-3.0.0-beta-2.war
 
 RUN apt-get install -y tomcat7 tomcat7-user
 
