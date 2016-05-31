@@ -1,6 +1,6 @@
 FROM tomcat:7-jre8
 
-MAINTAINER Florian Kuhn 
+MAINTAINER Arne Neumann, Florian Kuhn 
 
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y wget mysql-server mysql-client tomcat7-user tomcat7-admin
