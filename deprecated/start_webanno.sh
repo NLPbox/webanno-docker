@@ -1,0 +1,1 @@
+service webanno start && bash
