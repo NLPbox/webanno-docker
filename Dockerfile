@@ -15,7 +15,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y wget mysql-server mysql-cl
 # Install Oracle Java
 #RUN apt-get -y install oracle-java8-installer
 
-COPY create_webanno_db.sql mysql-init tmp/
+COPY create_webanno_db.sql mysql-init /tmp/
 
 RUN service mysql stop
 RUN mysqld_safe --init-file=/tmp/mysql-init &
