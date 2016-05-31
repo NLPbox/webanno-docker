@@ -17,4 +17,4 @@ The service starts with, for example:
 docker run -i -t -p 18080:18080 webanno3
 ```
 
-You can then access the webanno frontend via localhost:18080/webanno 
+You can then access the webanno frontend via **localhost:18080/webanno** 
