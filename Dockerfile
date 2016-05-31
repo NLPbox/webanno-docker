@@ -5,7 +5,10 @@ MAINTAINER Florian Kuhn <kuhn@ids-mannheim.de>
 RUN apt-get update
 RUN apt-get install -y wget mysql-server mysql-client
 
+
+
 # Add oracle java 7 repository
+# commented out while using tomcat:latest
 #RUN apt-get -y install software-properties-common
 #RUN add-apt-repository ppa:webupd8team/java
 #RUN apt-get -y update
