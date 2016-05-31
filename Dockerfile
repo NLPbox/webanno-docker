@@ -1,6 +1,6 @@
 FROM tomcat:latest
 
-MAINTAINER Florian Kuhn <kuhn@ids-mannheim.de>
+MAINTAINER Florian Kuhn 
 
 RUN apt-get update
 RUN apt-get install -y wget mysql-server mysql-client
