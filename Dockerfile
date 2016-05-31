@@ -5,8 +5,6 @@ MAINTAINER Florian Kuhn <kuhn@ids-mannheim.de>
 RUN apt-get update
 RUN apt-get install -y wget mysql-server mysql-client
 
-
-
 # Add oracle java 7 repository
 # commented out while using tomcat:latest
 #RUN apt-get -y install software-properties-common
@@ -16,7 +14,6 @@ RUN apt-get install -y wget mysql-server mysql-client
 #RUN echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 boolean true" | debconf-set-selections
 # Install Oracle Java
 #RUN apt-get -y install oracle-java8-installer
-
 
 COPY create_webanno_db.sql mysql-init tmp/
 
