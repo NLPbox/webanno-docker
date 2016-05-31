@@ -51,6 +51,7 @@ EXPOSE 18080
 RUN apt-get install -y nano telnet w3m
 COPY start_webanno.sh /tmp/
 CMD /tmp/start_webanno.sh
+CMD bash /opt/webanno/bin/startup.sh
 # RUN service tomcat7 start
 #CMD service webanno start && tail -f /var/lib/tomcat7/logs/catalina.out && bash /tmp/start_webanno.sh
 # tail -f /var/lib/tomcat7/logs/catalina.out
