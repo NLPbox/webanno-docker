@@ -3,7 +3,7 @@ FROM tomcat:7-jre8
 MAINTAINER Florian Kuhn 
 
 RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y wget mysql-server mysql-client
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y wget mysql-server mysql-client tomcat7-user
 
 # Add oracle java 7 repository
 # commented out while using tomcat:latest
