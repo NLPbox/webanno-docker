@@ -17,7 +17,7 @@ RUN apt-get install -y curl
 
 WORKDIR /opt
 
-RUN wget --no-check-certificate  https://github.com/webanno/webanno/releases/download/webanno-3.0.0-beta-2/webanno-webapp-3.0.0-beta-2.war 
+RUN wget --no-check-certificate  https://github.com/webanno/webanno/releases/download/webanno-3.0.0-beta-4/webanno-webapp-3.0.0-beta-2.war 
 
 RUN tomcat7-instance-create -p 18080 -c 18005 webanno && \
     chown -R www-data /opt/webanno
