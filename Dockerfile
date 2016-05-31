@@ -35,4 +35,4 @@ RUN chown -R www-data /srv/webanno
 EXPOSE 18080
 
 RUN apt-get install -y nano telnet w3m
-CMD bash /opt/webanno/bin/startup.sh && tail -f /opt/webanno/logs/catalina.out
+CMD bash /opt/webanno/bin/startup.sh && tail -f /opt/webanno/logs/catalina.out &
