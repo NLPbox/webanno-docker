@@ -3,7 +3,7 @@
 
 FROM tomcat:7-jre8
 
-MAINTAINER Arne Neumann, Florian Kuhn 
+MAINTAINER Florian Kuhn (https://github.com/fkuhn), Arne Neumann (https://github.com/arne-cl)
 
 RUN apt-get update
 # Install tomcat utilities (we will need tomcat7-instance-create) and mysql
