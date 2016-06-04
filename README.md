@@ -1,9 +1,20 @@
 Installation
 ============
 
-docker build -t webanno https://github.com/nlpdocker/discoursegraphs-docker.git
+```shell
+docker build -t webanno3 https://github.com/fkuhn/webanno3-docker.git
+```
+or 
+```shell
+docker build --no-cache=true -t webanno3 https://github.com/fkuhn/webanno3-docker.git
+```
 
 Usage
 =====
+The service starts with, for example:
 
-Unfortunately, this doesn't work yet.
+```shell
+docker run -i -t -p 18080:18080 webanno3
+```
+
+You can then access the webanno frontend via **localhost:18080/webanno** 
