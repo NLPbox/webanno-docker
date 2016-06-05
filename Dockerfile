@@ -34,6 +34,7 @@ RUN mkdir -p /usr/share/tomcat7/common/classes /usr/share/tomcat7/server/classes
 # Rename the webanno webapp 
 COPY webanno_initd /etc/init.d/webanno
 RUN mv /opt/webanno-webapp-3.0.0-beta-4.war /opt/webanno/webapps/webanno.war
+
 # Setup webanno as a service 
 RUN chmod +x /etc/init.d/webanno
 RUN update-rc.d webanno defaults
@@ -44,7 +45,7 @@ RUN chown -R www-data /srv/webanno
 
 EXPOSE 18080
 
-# If you wish minimal some editor, telnet and text-browser functionality
+# If you wish to have some minimal editor, telnet and text-browser functionality
 # for interactive mode in docker, you can uncomment the following line: 
 # RUN apt-get install -y nano telnet w3m
 
